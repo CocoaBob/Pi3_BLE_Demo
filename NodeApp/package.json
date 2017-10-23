@@ -1,5 +1,5 @@
 {
-  "name": "rpi3-application",
+  "name": "Pi3Demo",
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {},
