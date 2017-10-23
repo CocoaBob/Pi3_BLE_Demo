@@ -1,7 +1,7 @@
 var bleno = require('bleno');
 var util = require('util');
 
-var VibrationCharacteristic = require('./characteristics/LoadVibrationCharacterisitc');
+var VibrationCharacteristic = require('./characteristics/VibrationCharacteristic');
 
 function DeviceService() {
   bleno.PrimaryService.call(this, {

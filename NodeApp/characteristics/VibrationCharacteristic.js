@@ -2,6 +2,7 @@ var bleno = require('bleno');
 var util = require('util');
 
 var BlenoCharacteristic = bleno.Characteristic;
+var BlenoDescriptor = bleno.Descriptor;
 
 var VibrationCharacteristic = function() {
  VibrationCharacteristic.super_.call(this, {
