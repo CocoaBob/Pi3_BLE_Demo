@@ -1,12 +1,8 @@
 var bleno = require('bleno');
 
-process.env['BLENO_DEVICE_NAME']='Elliss X1';
-
 console.log('Waiting for Bluetooth state change...');
 
-var DeviceService = require('./DeviceService');
-
-var deviceService = new DeviceService();
+var deviceService = require('./DeviceService');
 
 bleno.on('stateChange', function(state) {
   console.log('on -> stateChange: ' + state);
@@ -18,9 +14,7 @@ bleno.on('stateChange', function(state) {
 });
 
 bleno.on('advertisingStart', function(error) {
-  console.log('on -> advertisingStart: ' +
-    (error ? 'error ' + error : 'success')
-  );
+  console.log('on -> advertisingStart: ' + (error ? 'error ' + error : 'success'));
 
   if (!error) {
     bleno.setServices([

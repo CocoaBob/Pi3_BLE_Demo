@@ -1,17 +1,15 @@
 var bleno = require('bleno');
 var util = require('util');
 
-var VibrationCharacteristic = require('./VibrationCharacteristic');
+var vibrationCharacteristic = require('./VibrationCharacteristic');
 
 function DeviceService() {
   bleno.PrimaryService.call(this, {
     uuid: 'fff0',
-    characteristics: [
-      new VibrationCharacteristic()
-    ]
+    characteristics: [vibrationCharacteristic]
   });
 };
 
 util.inherits(DeviceService, bleno.PrimaryService);
 
-module.exports = DeviceService;
+module.exports = new DeviceService();

@@ -60,4 +60,4 @@ VibrationCharacteristic.prototype.onWriteRequest = function(data, offset, withou
 
 util.inherits(VibrationCharacteristic, BlenoCharacteristic);
 
-module.exports = VibrationCharacteristic;
+module.exports = new VibrationCharacteristic();
