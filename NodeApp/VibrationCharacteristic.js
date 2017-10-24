@@ -21,7 +21,7 @@ var VibrationCharacteristic = function() {
 };
 
 VibrationCharacteristic.prototype.onReadRequest = function(offset, callback) {
-  console.log('VibrationCharacteristic - onReadRequest: value = ' + this._value.toString('hex'));
+  console.log('VibrationCharacteristic - onReadRequest: value = ' + data.toString('hex'));
 
   callback(this.RESULT_SUCCESS, this._value);
 };
