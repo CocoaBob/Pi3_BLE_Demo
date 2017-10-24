@@ -1,5 +1,7 @@
 var bleno = require('bleno');
 
+process.env['BLENO_DEVICE_NAME']='Elliss X1';
+
 console.log('Waiting for Bluetooth state change...');
 
 var DeviceService = require('./DeviceService');

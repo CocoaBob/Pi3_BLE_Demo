@@ -27,10 +27,10 @@ VibrationCharacteristic.prototype.onReadRequest = function(offset, callback) {
 };
 
 VibrationCharacteristic.prototype.onWriteRequest = function(data, offset, withoutResponse, callback) {
-  console.log('VibrationCharacteristic - onWriteRequest: value = ' + this._value.toString('hex'));
+  console.log('VibrationCharacteristic - onWriteRequest: value = ' + data.toString('hex'));
   if (offset) {
     callback(this.RESULT_ATTR_NOT_LONG);
-  } else if (data.length <= 4) {
+  } else if (data.length < 4) {
     callback(this.RESULT_INVALID_ATTRIBUTE_LENGTH);
   } else {
     var c1 = data.readUInt8(0);
